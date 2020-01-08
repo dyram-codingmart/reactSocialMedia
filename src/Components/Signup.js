@@ -30,22 +30,20 @@ class Signup extends React.Component {
         <br />
         <br />
         <form>
-          <label>Username&nbsp;&nbsp;</label>
+          <label>Username&nbsp;&nbsp;&nbsp;</label>
           <input
             type="text"
             name="username"
             value={this.state.username}
-            placeholder="Username"
             onChange={e => this.change(e)}
           />
           <br />
           <br />
           <label>Password&nbsp;&nbsp;&nbsp;</label>
           <input
-            type="text"
+            type="password"
             name="password"
             value={this.state.password}
-            placeholder="Password"
             onChange={e => this.change(e)}
           />
           <br />
@@ -54,7 +52,7 @@ class Signup extends React.Component {
         </form>
         <br />
         <br />
-        <form action="/login">
+        <form id="loginForm" action="/login">
           <button type="submit">Login</button>
         </form>
       </div>

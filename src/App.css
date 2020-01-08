@@ -3,20 +3,218 @@
   background-image: linear-gradient(to right, tan, beige);
   font-size: larger;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+}
+body {
+  background: black;
+  color: whitesmoke;
 }
 button {
   padding: 10px;
   width: 10%;
   border: none;
-  box-shadow: 2px 2px 2px grey;
-  background: white;
+  box-shadow: 2px 2px 2px black;
+  background: blue;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5%;
 }
 button:hover {
-  box-shadow: 4px 4px 4px grey;
-  background: skyblue;
+  box-shadow: 4px 4px 4px black;
 }
 input {
   width: 13%;
   font-size: large;
   text-align: center;
+}
+select {
+  width: 13%;
+  font-size: large;
+  text-align: center;
+}
+#hiddenRouteLogin {
+  display: none;
+}
+#proPic {
+  max-width: 10%;
+  background: white;
+  border-radius: 50%;
+  margin-left: auto;
+}
+.display {
+  background: gray;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.display > button {
+  max-height: 10%;
+}
+.posts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.posts > div {
+  margin: 10px;
+  width: 22%;
+  box-sizing: border-box;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  color: black;
+}
+.postsDiv:hover {
+  box-shadow: 5px 5px 5px black;
+}
+#postModal {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: lightgray;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  box-shadow: 5px 5px 5px black;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: gray;
+}
+.popup .close:hover {
+  color: red;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+.linkButton {
+  padding: 1%;
+  background: blue;
+  border-radius: 7%;
+  color: white;
+  text-decoration: none;
+  margin: 2%;
+}
+.linkButton:hover {
+  box-shadow: 4px 4px 4px black;
+}
+.inputs {
+  width: 80%;
+  height: 20vh;
+  text-align: center;
+}
+#modalPostButton {
+  width: 20%;
+}
+#modalTags {
+  height: 7vh;
+}
+#closeButton {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.postsDelIcon {
+  background: black;
+  border-radius: 50%;
+  border: none;
+  box-shadow: none;
+  color: white;
+}
+.postsDelIcon:hover {
+  color: red;
+  box-shadow: none;
+}
+body {
+  font-family: Poppins, sans-serif;
+}
+label,
+input[type="file"] {
+  color: black;
+}
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+}
+.cardHeader > form {
+  margin-left: auto;
+  border: none;
+  width: 10%;
+  display: flex;
+  margin-top: 30px;
+}
+.redirectButton {
+  width: 80%;
+  height: 60%;
+}
+.timelinePosts > * {
+  padding: 10px;
+}
+.timePostsDiv {
+  background: white;
+  color: black;
+}
+.reactBar {
+  display: flex;
+  flex-direction: row;
+}
+.likeButton {
+  background: none;
+  color: green;
+  border: 2px solid green;
+}
+.commentButton {
+  background: none;
+  color: blue;
+  border: 2px solid blue;
+}
+.likeButton:hover {
+  background: green;
+  color: white;
+}
+.commentButton:hover {
+  background: blue;
+  color: white;
+}
+.commentBox {
+  padding: 20px;
+}
+.commentBox > input {
+  width: 25%;
+  height: 10vh;
+  text-align: left;
+}
+.postComs {
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+  display: flex;
+  flex-direction: row;
+  padding: 3px;
+  margin: 7px;
+  width: 30%;
+}
+.postComs > h6 {
+  margin: 2px;
+}
+.likesCounter {
+  padding: 10px;
 }

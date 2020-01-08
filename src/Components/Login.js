@@ -20,9 +20,13 @@ class Login extends React.Component {
       return user.username === this.state.username;
     });
     console.log("USR : ", usr);
-    if (usr.length > 0 && usr[0].password === this.state.password)
+    if (usr.length > 0 && usr[0].password === this.state.password) {
       console.log("valid");
-    else console.log("invalid");
+      localStorage.setItem("loggedInUser", JSON.stringify(this.state));
+      this.routeElement.click();
+    } else {
+      console.log("invalid");
+    }
   };
 
   render() {
@@ -34,12 +38,11 @@ class Login extends React.Component {
         <br />
         <br />
         <form>
-          <label>Username&nbsp;&nbsp;</label>
+          <label>Username&nbsp;&nbsp;&nbsp;</label>
           <input
             type="text"
             name="username"
             value={this.state.username}
-            placeholder="Username"
             onChange={e => this.change(e)}
           />
           <br />
@@ -49,7 +52,6 @@ class Login extends React.Component {
             name="password"
             type="password"
             value={this.state.password}
-            placeholder="Password"
             onChange={e => this.change(e)}
           />
           <br />
@@ -60,6 +62,11 @@ class Login extends React.Component {
         <br />
         <form action="/">
           <button type="submit">Sign-Up</button>
+        </form>
+        <form id="hiddenRouteLogin" action="/details">
+          <button ref={button => (this.routeElement = button)} type="submit">
+            Redirect
+          </button>
         </form>
       </div>
     );

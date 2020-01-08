@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
+import Details from "./Components/Details";
+import Card from "./Components/Card";
+import Timeline from "./Components/Timeline";
 
 class App extends React.Component {
   state = {
@@ -36,10 +39,10 @@ class App extends React.Component {
                 <Signup onSubmit={fields => this.onSubmit(fields)} />
               )}
             />
-            <Route
-              path="/login"
-              component={() => <Login />}
-            />
+            <Route path="/login" component={() => <Login />} />
+            <Route path="/details" component={() => <Details />} />
+            <Route path="/card" component={() => <Card />} />
+            <Route path="/timeline" component={() => <Timeline />} />
           </Switch>
         </div>
       </Router>
