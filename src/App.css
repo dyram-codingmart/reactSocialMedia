@@ -1,9 +1,12 @@
 .forms {
   padding: 10%;
-  background-image: linear-gradient(to right, tan, beige);
+  background: black;
   font-size: larger;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
+}
+.forms > label {
+  color: white;
 }
 body {
   background: black;
@@ -67,6 +70,10 @@ select {
 }
 .postsDiv:hover {
   box-shadow: 5px 5px 5px black;
+}
+.postsDiv > img {
+  max-width: 130px;
+  max-height: 130px;
 }
 #postModal {
   position: absolute;
@@ -147,7 +154,6 @@ select {
 body {
   font-family: Poppins, sans-serif;
 }
-label,
 input[type="file"] {
   color: black;
 }
@@ -217,4 +223,17 @@ input[type="file"] {
 }
 .likesCounter {
   padding: 10px;
+}
+.commentDelIcon {
+  border-radius: 50%;
+  color: black;
+  cursor: pointer;
+}
+
+.commentDelIcon path {
+  fill: currentColor;
+}
+.commentDelIcon:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+  /* color: red; */
 }

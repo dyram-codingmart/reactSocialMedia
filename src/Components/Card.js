@@ -46,7 +46,6 @@ export class Card extends Component {
       postTags: this.state.postTags,
       img: this.props.image
     };
-    console.log(post.img);
     this.setState(
       { posts: [...this.state.posts, post] },
       this.setState({ postDesc: "", postTags: "", image: "" })
@@ -142,7 +141,9 @@ export class Card extends Component {
               ></input>
               <br />
               <br />
-              <label>Upload Image ---> &nbsp;&nbsp;</label>
+              <label style={{ color: "black" }}>
+                Upload Image ---> &nbsp;&nbsp;
+              </label>
               <input
                 style={{ width: "60%" }}
                 type="file"
@@ -161,11 +162,7 @@ export class Card extends Component {
         <div className="posts">
           {this.state.posts.map((postz, index) => (
             <div className="postsDiv">
-              <img
-                alt="yoyoyoyoyoyo"
-                src={postz.img}
-                style={{ width: "40%" }}
-              ></img>
+              <img alt="yoyoyoyoyoyo" src={postz.img}></img>
               <h1>{postz.postDesc}</h1>
               <pre>{postz.postTags}</pre>
               <button
